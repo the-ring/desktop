@@ -1,0 +1,42 @@
+.titlebar {
+  -webkit-app-region: drag;
+  position: fixed;
+  top: 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: $thirdColor;
+  z-index: 0;
+  &__title {
+    display: flex;
+    height: 100%;
+    width: calc(100vw - 70px);
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 70px;
+    align-items: center;
+  }
+  &__controls {
+    display: flex;
+    height: 32px;
+    user-select: none;
+    -webkit-app-region: no-drag;
+    z-index: 1;
+    & > a {
+      -webkit-app-region: no-drag;
+      user-select: none;
+      cursor: pointer;
+      width: 46px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+}

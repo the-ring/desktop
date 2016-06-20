@@ -1,0 +1,51 @@
+@import 'the-ring-main-styles';
+@import './titlebar.pcss';
+
+html {
+  user-select: none;
+  overflow: hidden;
+  body {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.main {
+  margin-top: 32px;
+  padding-left: 0 !important;
+  height: 100%;
+  &__cards {
+    &--reports, &--sites, &--sites-view {
+      height: calc(100vh - 100px) !important;
+    }
+    &--reports, &--sites {
+      .card {
+        height: 350px !important;
+      }
+    }
+  }
+}
+
+.cards {
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left: 70px;
+  margin-bottom: 30px;
+}
+
+.header {
+  &__nav {
+    margin-left: 70px;
+  }
+}
+
+.sidebar {
+  margin-top: 32px;
+}
+
+.modal {
+  margin-top: -200px !important;
+  &::before {
+    top: 32px;
+  }
+}
